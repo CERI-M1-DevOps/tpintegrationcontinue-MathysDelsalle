@@ -1,7 +1,7 @@
 name : Jave CI with Maven - Test and package
 on :
   pull_request:
-    branches: ["main"]
+    branches: [main]
 jobs :
   build:
     name: build
