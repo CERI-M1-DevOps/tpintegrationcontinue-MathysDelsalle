@@ -19,6 +19,11 @@ jobs :
         with:
           path: ~/.m2/repository
           key: '7'
+      - name: Cache SonarQube packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
       - name: Maven
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
