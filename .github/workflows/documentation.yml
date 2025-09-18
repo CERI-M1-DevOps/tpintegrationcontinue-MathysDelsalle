@@ -1,0 +1,14 @@
+name : Documentation
+on :
+  pull_request:
+    types:
+      - closed
+    branches: [main]
+jobs :
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - run:  mvn -B javadoc::javadoc
+      - name: 'Deploy documentation'
+        uses : peaceiris/actions-gh-pages@v4
