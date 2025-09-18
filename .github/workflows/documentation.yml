@@ -19,3 +19,5 @@ jobs :
       - run:  mvn -B javadoc::javadoc
       - name: 'Deploy documentation'
         uses : peaceiris/actions-gh-pages@v4
+        with :
+          publish_dir : .target/reports/apidocs
