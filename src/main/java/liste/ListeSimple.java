@@ -13,6 +13,11 @@ public class ListeSimple {
         size++;
     }
 
+    /**
+     * Méthode qui modifie la valeur de element
+     * @param element : valeur de element dans un Noeud
+     * @param nouvelleValeur : valeur pour remplacer la valeur de element
+     */
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null && courant.getElement() != element)
@@ -21,6 +26,11 @@ public class ListeSimple {
             courant.setElement(nouvelleValeur);
     }
 
+    /**
+     * Méthode qui modifie la valeur de element de tout les noeuds qui ont la même vaeur dans element
+     * @param element : valeur de element dans un Noeud
+     * @param nouvelleValeur : valeur pour remplacer la valeur de element
+     */
     public void modifieTous(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null) {
@@ -30,6 +40,10 @@ public class ListeSimple {
         }
     }
 
+    /**
+     * Méthode to string qui renvoie une liste sous forme de Texte
+     * @return
+     */
     public String toString() {
         StringBuilder sb = new StringBuilder("ListeSimple(");
         Noeud n = tete;
